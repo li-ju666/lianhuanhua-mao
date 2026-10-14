@@ -1,0 +1,14 @@
+[project]
+name = "lianhuanhua-mao"
+version = "0.1.0"
+description = "Find every page showing a given person in a corpus of scanned picture books: VLM sweep, targeted API check, human review"
+requires-python = ">=3.12"
+dependencies = [
+    "pillow>=12.3.0",
+    "qwen-vl-utils>=0.0.14",
+    "transformers>=5.19.0",
+    "vllm>=0.30.0",
+]
+
+[project.optional-dependencies]
+api = ["httpx>=0.27"]   # only scripts/supplement.py and scripts/api_score.py need it
